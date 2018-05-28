@@ -55,7 +55,15 @@ class Player {
                 console.log(this.y);
                 this.div.style.backgroundImage = "url(../docs/images/player/idle_down.png)";
                 this.update();
-                break;    
-        }
+                break; 
+            case 32:
+                console.log(event.keyCode + " pressed");
+                this.placeBomb();
+                break;
+        }      
     }
+    private placeBomb() : void {
+        new Bomb(this.x, this.y)
+    }
+
 }    

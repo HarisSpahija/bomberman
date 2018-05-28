@@ -1,9 +1,12 @@
 "use strict";
 var Bomb = (function () {
-    function Bomb() {
+    function Bomb(x, y) {
         console.log("bomb created");
+        this.x = x;
+        this.y = y;
         this.div = document.createElement("bomb");
         document.body.appendChild(this.div);
+        this.div.style.transform = "translate(" + this.x + "px," + this.y + "px)";
     }
     return Bomb;
 }());
@@ -11,7 +14,6 @@ var Game = (function () {
     function Game() {
         console.log("new game created!");
         this.player = new Player;
-        this.bomb = new Bomb;
     }
     Game.prototype.gameLoop = function () {
         this.player.update();
@@ -66,7 +68,14 @@ var Player = (function () {
                 this.div.style.backgroundImage = "url(../docs/images/player/idle_down.png)";
                 this.update();
                 break;
+            case 32:
+                console.log(event.keyCode + " pressed");
+                this.placeBomb();
+                break;
         }
+    };
+    Player.prototype.placeBomb = function () {
+        new Bomb(this.x, this.y);
     };
     return Player;
 }());
