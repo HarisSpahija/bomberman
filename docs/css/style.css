@@ -1,0 +1,6 @@
+player {
+    background-image: url('../images/sprites.png');
+    background-size:cover;
+    width:200px; height:200px;
+    background-color: aqua;
+}
