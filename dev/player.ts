@@ -32,24 +32,28 @@ class Player {
             console.log(event.keyCode + " pressed");
                 this.x = this.x-this.speed;
                 console.log(this.x);
+                this.div.style.backgroundImage = "url(../docs/images/player/idle_side_left.png)"
                 this.update();
                 break;
             case 68: //D
             console.log(event.keyCode + " pressed");
                 this.x = this.x+this.speed;
                 console.log(this.x);
+                this.div.style.backgroundImage = "url(../docs/images/player/idle_side_right.png)"
                 this.update();
                 break;
             case 87: //W
                 console.log(event.keyCode + " pressed");
                 this.y = this.y-this.speed;
                 console.log(this.y);
+                this.div.style.backgroundImage = "url(../docs/images/player/idle_up.png)"
                 this.update();
                 break;
             case 83: //S
                 console.log(event.keyCode + " pressed");
                 this.y = this.y+this.speed;
                 console.log(this.y);
+                this.div.style.backgroundImage = "url(../docs/images/player/idle_down.png)";
                 this.update();
                 break;    
         }

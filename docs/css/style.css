@@ -14,9 +14,9 @@ body * {
 }
 
 player {
-    background-image: url('../images/bomberman_idle.gif');
+    background-image: url('../images/player/idle_down.png');
     background-size: 100% 100%;
-    width:100px; height:200px;
+    width:100px; height:100px;
 }
 
 bomb {
