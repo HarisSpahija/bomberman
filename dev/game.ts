@@ -1,15 +1,18 @@
 class Game {
 
+    private player: Player;
+    private bomb: Bomb;
+
     constructor(){
         console.log("new game created!")
 
-        let p = new Player()
-        let b = new Bomb()
+        this.player = new Player;
+        this.bomb = new Bomb;
     }
 
-    createElements() {
-        
-        
+    private gameLoop(){ 
+        this.player.update();    
+        requestAnimationFrame(this.gameLoop.bind(this));
     }
 }
 
